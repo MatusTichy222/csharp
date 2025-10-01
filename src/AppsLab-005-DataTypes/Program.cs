@@ -66,10 +66,10 @@ namespace MyApp
            Console.WriteLine("Volam sa Jano");  */
 
 
-            /////////////////
-            int birthDay = 29;
-            int birthMonth = 7;
-            int birthYear = 2010;
+            
+           // int birthDay = 29;
+            //int birthMonth = 7;
+            //int birthYear = 2010;
 
             /*
                         //scitanie datumu mesiaca a roku narodenia
