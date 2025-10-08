@@ -9,7 +9,7 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            /* //true/false
+             //true/false
              bool isAdult = false;
              Console.WriteLine(isAdult);
 
@@ -27,10 +27,10 @@ namespace MyApp
 
              //jeden znak
              char gender = 'm';
-             Console.WriteLine(gender);*/
+             Console.WriteLine(gender);
 
 
-            /* int a = 10;
+             int a = 10;
            int b = 20 + 30 + 600 + 6000 + 5 ;
 
            //scitavanie cisel A a B
@@ -63,7 +63,7 @@ namespace MyApp
            Console.WriteLine(a / b);
            Console.WriteLine(10 / 5);
 
-           Console.WriteLine("Volam sa Jano");  */
+           Console.WriteLine("Volam sa Jano");  
 
 
             
@@ -71,7 +71,7 @@ namespace MyApp
             //int birthMonth = 7;
             //int birthYear = 2010;
 
-            /*
+            
                         //scitanie datumu mesiaca a roku narodenia
                         int birthSum = birthDay + birthMonth + birthYear;
                         //vypisanie na konzol
@@ -98,10 +98,10 @@ namespace MyApp
 
                         //vypisat meno a sucet dna a mesiaca narodenia
 
-                        Console.WriteLine("Matus" + (birthDay + birthYear));*/
+                        Console.WriteLine("Matus" + (birthDay + birthYear));
 
 
-            /* bool result = 6 != 3;
+            bool result = 6 != 3;
              Console.WriteLine(result);
 
              bool result2 = 7 == 3;
@@ -122,7 +122,7 @@ namespace MyApp
              Console.WriteLine(krabickaB == krabickaA); */
 
 
-            /*
+            
            Console.WriteLine("Napis meno");
            string meno = Console.ReadLine();
            string vypis = "Ahoj ";
@@ -160,10 +160,10 @@ namespace MyApp
            {
                Console.WriteLine("Si narodeny pred rokom 2000");
            }
-           */
+           
 
 
-            /* Console.WriteLine("Zadaj znamku z matematiky");
+             Console.WriteLine("Zadaj znamku z matematiky");
              string znamkamText = Console.ReadLine();
              int znamkam = int.Parse(znamkamText);
 
@@ -178,7 +178,7 @@ namespace MyApp
              {
                  Console.WriteLine("Tvoj priemer je nedostacujuci");
              }
-            */
+            
 
 
 
