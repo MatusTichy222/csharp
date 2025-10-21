@@ -10,7 +10,7 @@ namespace cvicenie_subor
             ;
             string[] text = File.ReadAllLines("People_100.csv");
             // MinMoneyCountAvg(text);
-            UndHalfMilion(text);
+            Under05M(text);
             // RodneCislo(text);
             /*MoneyCountAvg(text);
             MoneyCountAvg(text);
@@ -73,29 +73,28 @@ namespace cvicenie_subor
         //posleme tam text a ona nam musi vratit polie vsetkych mien
 
 
-        public static void UndHalfMilion(string[] text)
+
+        public static void Under05M(string[] text)
         {
-            int minValue = 500000;
-            string minValuePerson = "";
+            List<string> peopleWithUnder05M = new List<string>();
             foreach (string line in text.Skip(1))
             {
-                string[] splitsT = line.Split(";");
-                int accountValue = int.Parse(splitsT[4]);
-                if (accountValue < minValue)
-                {
-                    minValue = accountValue;
-                    minValuePerson = splitsT[0] + " " + splitsT[1];
-                    Console.WriteLine(minValuePerson);
-                }
+                string[] splits = line.Split(";");
+                int accountvalue = int.Parse(splits[4]);
+                if (accountvalue < 5000000)
+                    peopleWithUnder05M.Add(splits[0 ] + " " + splits[1]);
             }
-
-
-
-
-
-
-
-
+            foreach (string under05m in peopleWithUnder05M)
+            {
+                Console.WriteLine(under05m);
+            }
         }
+
+
+
+
+
+
     }
+
 }
