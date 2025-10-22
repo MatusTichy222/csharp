@@ -7,8 +7,8 @@ namespace cvicenie_subor
     {
         static void Main(string[] args)
         {
-            ;
-            string[] text = File.ReadAllLines("People_100.csv");
+            
+           /*string[] text = File.ReadAllLines("People_100.csv");
             // MinMoneyCountAvg(text);
             Under05M(text);
             // RodneCislo(text);
@@ -18,11 +18,11 @@ namespace cvicenie_subor
             MoneyCountAvg(text);
             MoneyCountAvg(text);
             MoneyCountAvg(text);
-           */
+           
         }
 
 
-        /* public static void MoneyCountAvg(string[] text)
+        public static void MoneyCountAvg(string[] text)
      {
          int sum = 0;
          foreach (string line in text.Skip(1))
@@ -34,10 +34,10 @@ namespace cvicenie_subor
          }
 
 
-         Console.WriteLine(sum / (text.Count() - 1));*/
+         Console.WriteLine(sum / (text.Count() - 1));
 
 
-        /*  public static void RodneCislo(string[] text)
+          public static void RodneCislo(string[] text)
           {
 
               foreach (string line in text.Skip(1))
@@ -48,9 +48,9 @@ namespace cvicenie_subor
 
               }
 
-          }*/
+          }
 
-        /*  public static void MinMoneyCountAvg(string[] text)
+         public static void MinMoneyCountAvg(string[] text)
           {
               int minValue = 99999999;
               string minValuePerson = "";
@@ -67,14 +67,14 @@ namespace cvicenie_subor
               }
 
 
-              Console.WriteLine(minValuePerson);*/
+              Console.WriteLine(minValuePerson);
 
         //vsetkych ktory maju pod pol miliona na ucte
         //posleme tam text a ona nam musi vratit polie vsetkych mien
 
 
-
-        public static void Under05M(string[] text)
+        //domaca uloha
+       public static void Under05M(string[] text)
         {
             List<string> peopleWithUnder05M = new List<string>();
             foreach (string line in text.Skip(1))
@@ -86,9 +86,14 @@ namespace cvicenie_subor
             }
             foreach (string under05m in peopleWithUnder05M)
             {
-                Console.WriteLine(under05m);
+               Console.WriteLine(under05m);
             }
-        }
+        }*/
+
+        
+
+            
+
 
 
 
