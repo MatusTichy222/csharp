@@ -109,6 +109,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cvicenie_objekty", "cviceni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cvicenie_BattleSimulator", "Cvicenie_BattleSimulator\Cvicenie_BattleSimulator.csproj", "{9593C86E-C52C-4513-9004-0137C6C2C6E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cvicenie 5.11.5", "cvicenie 5.11.5\cvicenie 5.11.5.csproj", "{728AAEEA-4786-47CC-8B70-F694A2B421F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -731,6 +733,18 @@ Global
 		{9593C86E-C52C-4513-9004-0137C6C2C6E3}.Release|x64.Build.0 = Release|Any CPU
 		{9593C86E-C52C-4513-9004-0137C6C2C6E3}.Release|x86.ActiveCfg = Release|Any CPU
 		{9593C86E-C52C-4513-9004-0137C6C2C6E3}.Release|x86.Build.0 = Release|Any CPU
+		{728AAEEA-4786-47CC-8B70-F694A2B421F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{728AAEEA-4786-47CC-8B70-F694A2B421F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{728AAEEA-4786-47CC-8B70-F694A2B421F0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{728AAEEA-4786-47CC-8B70-F694A2B421F0}.Debug|x64.Build.0 = Debug|Any CPU
+		{728AAEEA-4786-47CC-8B70-F694A2B421F0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{728AAEEA-4786-47CC-8B70-F694A2B421F0}.Debug|x86.Build.0 = Debug|Any CPU
+		{728AAEEA-4786-47CC-8B70-F694A2B421F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{728AAEEA-4786-47CC-8B70-F694A2B421F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{728AAEEA-4786-47CC-8B70-F694A2B421F0}.Release|x64.ActiveCfg = Release|Any CPU
+		{728AAEEA-4786-47CC-8B70-F694A2B421F0}.Release|x64.Build.0 = Release|Any CPU
+		{728AAEEA-4786-47CC-8B70-F694A2B421F0}.Release|x86.ActiveCfg = Release|Any CPU
+		{728AAEEA-4786-47CC-8B70-F694A2B421F0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -787,6 +801,7 @@ Global
 		{05BFE0C4-4FB0-44D0-A5B5-2463251DB222} = {56555FB0-B513-49EF-9002-A5AF135EA090}
 		{D0468290-FDE0-4D52-864B-F05FE4D5F632} = {56555FB0-B513-49EF-9002-A5AF135EA090}
 		{9593C86E-C52C-4513-9004-0137C6C2C6E3} = {56555FB0-B513-49EF-9002-A5AF135EA090}
+		{728AAEEA-4786-47CC-8B70-F694A2B421F0} = {56555FB0-B513-49EF-9002-A5AF135EA090}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D028BCE2-5FE2-4317-BEF9-6C839912FF38}
