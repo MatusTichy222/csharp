@@ -21,7 +21,7 @@ namespace Cvicenie_BattleSimulator
 
         public void MonsterAttack(Hero hero)
         {
-            hero.TakeDamage(this.DMG);
+          
             this.DMG += 1;
         }
     }

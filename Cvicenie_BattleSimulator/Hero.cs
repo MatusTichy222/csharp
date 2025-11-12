@@ -45,16 +45,7 @@ namespace Cvicenie_BattleSimulator
                 return false;
             }
         }
-        public void TakeDamage(int damage)
-        {
-            int finalDamage = damage - Armor;
-
-            if (finalDamage < 0)
-                finalDamage = 0; 
-
-            HP -= finalDamage;
-        }
-
+    
         public bool HeroDMG(Monster monster)
         {
             if (Eng - 20 >= 0)
