@@ -10,7 +10,8 @@ namespace Cvicenie_BattleSimulator
     {
         public string Name { get; set; } = "Gumkac";
         public int HP { get; set; } = 100;
-        public int DMG { get; set; } = 10;
+        public int DMGMin { get; set; } = 6;
+        public int DMGMax { get; set; } = 14;
 
         public int Eng { get; set; } = 100;
         public int Armor { get; set; } = 15;
@@ -19,8 +20,10 @@ namespace Cvicenie_BattleSimulator
         {
             if (Eng - 20 >= 0)
             {
+                Random random_damage = new Random();
+                int finalDamage = random_damage.Next(DMGMin, DMGMax);
                 Eng -= 20;
-                monster.HP -= this.DMG;
+                monster.HP -= finalDamage;
                 return true;
             }
             else
@@ -34,8 +37,10 @@ namespace Cvicenie_BattleSimulator
         {
             if (Eng - 20 >= 0)
             {
+                Random random_damage = new Random();
+                int finalDamage = random_damage.Next(DMGMin, DMGMax);
                 Eng -= 20;
-                monster2.HP -= this.DMG;
+                monster2.HP -= finalDamage;
                 return true;
             }
             else
@@ -51,7 +56,8 @@ namespace Cvicenie_BattleSimulator
             if (Eng - 20 >= 0)
             {
                 Eng -= 20;
-                monster.HP -= this.DMG;
+                Random random_damage = new Random();
+                int finalDamage = random_damage.Next(DMGMin, DMGMax);
                 return true;
             }
             else
@@ -66,7 +72,8 @@ namespace Cvicenie_BattleSimulator
             if (Eng - 20 >= 0)
             {
                 Eng -= 20;
-                monster2.HP -= this.DMG;
+                Random random_damage = new Random();
+                int finalDamage = random_damage.Next(DMGMin, DMGMax);
                 return true;
             }
             else
