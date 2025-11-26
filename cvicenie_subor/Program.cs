@@ -1,18 +1,18 @@
 ﻿using System.Runtime.CompilerServices;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace cvicenie_subor
+/*namespace cvicenie_subor
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             
-           /*string[] text = File.ReadAllLines("People_100.csv");
+           string[] text = File.ReadAllLines("People_100.csv");
             // MinMoneyCountAvg(text);
             Under05M(text);
             // RodneCislo(text);
-            /*MoneyCountAvg(text);
+            *MoneyCountAvg(text);
             MoneyCountAvg(text);
             MoneyCountAvg(text);
             MoneyCountAvg(text);
@@ -100,6 +100,4 @@ namespace cvicenie_subor
 
 
 
-    }
-
-}
+    
