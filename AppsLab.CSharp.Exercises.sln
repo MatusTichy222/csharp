@@ -119,6 +119,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cvicenie_GameShop", "..\csh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sims projekt more", "..\csharp7\sims projekt more\sims projekt more.csproj", "{04D9DCE9-0B5D-4071-8770-A32B06A284EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cvicenie_ukladanie", "cvicenie_ukladanie\cvicenie_ukladanie.csproj", "{6497CCD2-8161-4A7D-A1A0-C33D187DCE76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -801,6 +803,18 @@ Global
 		{04D9DCE9-0B5D-4071-8770-A32B06A284EB}.Release|x64.Build.0 = Release|Any CPU
 		{04D9DCE9-0B5D-4071-8770-A32B06A284EB}.Release|x86.ActiveCfg = Release|Any CPU
 		{04D9DCE9-0B5D-4071-8770-A32B06A284EB}.Release|x86.Build.0 = Release|Any CPU
+		{6497CCD2-8161-4A7D-A1A0-C33D187DCE76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6497CCD2-8161-4A7D-A1A0-C33D187DCE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6497CCD2-8161-4A7D-A1A0-C33D187DCE76}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6497CCD2-8161-4A7D-A1A0-C33D187DCE76}.Debug|x64.Build.0 = Debug|Any CPU
+		{6497CCD2-8161-4A7D-A1A0-C33D187DCE76}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6497CCD2-8161-4A7D-A1A0-C33D187DCE76}.Debug|x86.Build.0 = Debug|Any CPU
+		{6497CCD2-8161-4A7D-A1A0-C33D187DCE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6497CCD2-8161-4A7D-A1A0-C33D187DCE76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6497CCD2-8161-4A7D-A1A0-C33D187DCE76}.Release|x64.ActiveCfg = Release|Any CPU
+		{6497CCD2-8161-4A7D-A1A0-C33D187DCE76}.Release|x64.Build.0 = Release|Any CPU
+		{6497CCD2-8161-4A7D-A1A0-C33D187DCE76}.Release|x86.ActiveCfg = Release|Any CPU
+		{6497CCD2-8161-4A7D-A1A0-C33D187DCE76}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -862,6 +876,7 @@ Global
 		{F67BDDCC-DA98-4CA6-81B0-FD0FF180D87E} = {56555FB0-B513-49EF-9002-A5AF135EA090}
 		{3D295767-BD86-4A79-893C-345A9C0A404F} = {56555FB0-B513-49EF-9002-A5AF135EA090}
 		{04D9DCE9-0B5D-4071-8770-A32B06A284EB} = {56555FB0-B513-49EF-9002-A5AF135EA090}
+		{6497CCD2-8161-4A7D-A1A0-C33D187DCE76} = {56555FB0-B513-49EF-9002-A5AF135EA090}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D028BCE2-5FE2-4317-BEF9-6C839912FF38}
