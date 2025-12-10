@@ -4,6 +4,8 @@
     {
         static void Main(string[] args)
         {
+            Casino casino = new Casino();
+            casino.StartCasino();
 
         }
     }
