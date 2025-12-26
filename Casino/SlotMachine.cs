@@ -8,16 +8,30 @@ namespace Casino
 {
     public class SlotMachine
     {
-        public char Sign1 { get; set; }
-        public char Sign2 { get; set; }
-        public char Sign3 { get; set; }
-        public Random RandomGenerator { get; set; }
 
-        public SlotMachine(char sign1, char sign2, char sign3)
+        public void SlotMachineGame(Player player)
         {
-            this.Sign1 = sign1;
-            this.Sign2 = sign2;
-            this.Sign3 = sign3;
+            Console.WriteLine("Kolko chces stavit?");
+            string stavkaTxt = Console.ReadLine();
+            int stavka = int.Parse(stavkaTxt);
+            if (stavka > player.Kredit)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Nemas dostatok kreditov na hranie!");
+                Console.ResetColor();
+                return;
+            }
+            else 
+            {
+                List<SlotMSymbols> Symbols = new List<SlotMSymbols>();  // Pridanie symbolov
+                Symbols.Add(new SlotMSymbols('7', 3));
+                Symbols.Add(new SlotMSymbols('§', 7));
+                Symbols.Add(new SlotMSymbols('%', 20));
+
+
+
+            }
         }
+
     }
 }
