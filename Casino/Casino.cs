@@ -13,10 +13,10 @@ namespace Casino
 
         public void StartCasino()
         {
-            LogoCasino logoCSN = new LogoCasino();
-            logoCSN.StartUI();
+           // LogoCasino logoCSN = new LogoCasino();
+            //logoCSN.StartUI();
             //Thread.Sleep(500);
-            Console.Clear();
+            //Console.Clear();
 
            
             
@@ -91,6 +91,7 @@ namespace Casino
                     Console.ResetColor();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Tvoje kredit: " + MyPlayer.Kredit);
+                    Console.WriteLine("xp: " + MyPlayer.Xp + "/" + "Level: " + MyPlayer.Level);
                     Console.ResetColor();
                     string commandTxt = Console.ReadLine();
                     int command = int.Parse(commandTxt);
@@ -142,12 +143,11 @@ namespace Casino
                             Console.WriteLine("Neplatný príkaz, skús znova.");
                             Console.ResetColor();
                             break;
+                            
+
                     }
-
                 }
-
             }
-
         }
     }
 }
