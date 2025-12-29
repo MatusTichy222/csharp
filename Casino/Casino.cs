@@ -13,11 +13,33 @@ namespace Casino
 
         public void StartCasino()
         {
-            Console.WriteLine("Zadaj svoje Meno");
+            LogoCasino logoCSN = new LogoCasino();
+            logoCSN.StartUI();
+            //Thread.Sleep(500);
+            Console.Clear();
+
+           
+            
+            Console.WriteLine(@" ====================================
+ |        CASINO ADMIRAL LOGIN       |
+ ====================================
+ |                                  |
+ |   Zadaj meno:                    |
+ |                                  |
+ |   Zadaj vek :                    |
+ |                                  |
+ |        [   P O K R A Č O V A Ť   ] |
+ ====================================");
+            Console.SetCursorPosition(18, 4);
             string name = Console.ReadLine();
-            Console.WriteLine("Vitaj " + name + " zadaj svoj vek");
+
+            Console.SetCursorPosition(18, 6);
             string ageTxt = Console.ReadLine();
             int age = int.Parse(ageTxt);
+            Console.Clear();
+            Console.WriteLine("LOADING.......");
+            Thread.Sleep(500);
+
 
             if (age < 18)
             {
@@ -79,11 +101,11 @@ namespace Casino
                             Console.Clear();
                             Console.ForegroundColor = ConsoleColor.Cyan;
                             Console.WriteLine(@"   _____ _       _     __  __            _     _             
-  / ____| |     | |   |  \/  |          | |   (_)            
- | (___ | | ___ | |_  | \  / | __ _  ___| |__  _ _ __   ___  
-  \___ \| |/ _ \| __| | |\/| |/ _` |/ __| '_ \| | '_ \ / _ \ 
-  ____) | | (_) | |_  | |  | | (_| | (__| | | | | | | |  __/ 
- |_____/|_|\___/ \__| |_|  |_|\__,_|\___|_| |_|_|_| |_|\___| 
+  / ____| |     | |    |  \/  |          | |   (_)            
+ | (___ | | ___ | |_   | \  / | __ _  ___| |__  _ _ __   ___  
+  \___ \| |/ _ \| __|  | |\/| |/ _` |/ __| '_ \| | '_ \ / _ \ 
+  ____) | | (_) | |_   | |  | | (_| | (__| | | | | | | |  __/ 
+ |_____/|_|\___/ \__|  |_|  |_|\__,_|\___|_| |_|_|_| |_|\___| 
                                                              
                                                              ");
                             slotMachine.SlotMachineGame(MyPlayer);
@@ -93,17 +115,27 @@ namespace Casino
                             Console.Clear();
                             Console.ForegroundColor = ConsoleColor.Yellow;
                             Console.WriteLine(@"  _    _           _   __  __ _                       
- | |  | |         | | |  \/  (_)                      
- | |__| | ___   __| | | \  / |_ _ __   ___ ___  _   _ 
- |  __  |/ _ \ / _` | | |\/| | | '_ \ / __/ _ \| | | |
- | |  | | (_) | (_| | | |  | | | | | | (_| (_) | |_| |
- |_|  |_|\___/ \__,_| |_|  |_|_|_| |_|\___\___/ \__,_|
+ | |  | |         | |  |  \/  (_)                      
+ | |__| | ___   __| |  | \  / |_ _ __   ___ ___  _   _ 
+ |  __  |/ _ \ / _` |  | |\/| | | '_ \ / __/ _ \| | | |
+ | |  | | (_) | (_| |  | |  | | | | | | (_| (_) | |_| |
+ |_|  |_|\___/ \__,_|  |_|  |_|_|_| |_|\___\___/ \__,_|
                                                       
                                                       ");
                             Console.ResetColor();
                             hodMincou.HodMincouGame(MyPlayer);
                             break;
                         case 9:
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine(@"  _____             _     _            _               _     _ _                                          _               _                
+ |  __ \           (_)   | |          (_)             (_)   | (_)                                        | |             | |               
+ | |  | | _____   ___  __| | ___ _ __  _  __ _  __   ___  __| |_ _ __ ___   ___   ___  __ _   _ __   __ _| |__  _   _  __| |_   _  ___ ___ 
+ | |  | |/ _ \ \ / / |/ _` |/ _ \ '_ \| |/ _` | \ \ / / |/ _` | | '_ ` _ \ / _ \ / __|/ _` | | '_ \ / _` | '_ \| | | |/ _` | | | |/ __/ _ \
+ | |__| | (_) \ V /| | (_| |  __/ | | | | (_| |  \ V /| | (_| | | | | | | |  __/ \__ \ (_| | | | | | (_| | |_) | |_| | (_| | |_| | (_|  __/
+ |_____/ \___/ \_/ |_|\__,_|\___|_| |_|_|\__,_|   \_/ |_|\__,_|_|_| |_| |_|\___| |___/\__,_| |_| |_|\__,_|_.__/ \__,_|\__,_|\__,_|\___\___|
+                                                                                                                                           
+                                                                                                                                           ");
+                            Console.ResetColor();
                             return;
                         default:
                             Console.ForegroundColor = ConsoleColor.Red;
