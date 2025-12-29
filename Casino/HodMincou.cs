@@ -56,6 +56,7 @@ namespace Casino
                             {
                                 int vyhra = stavka * 2;
                                 player.Kredit += vyhra;
+                                player.Xp += 2;
                                 Console.ForegroundColor = ConsoleColor.Green;
 
                                 Console.WriteLine("Vyhral si!");
@@ -66,6 +67,7 @@ namespace Casino
                             else
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
+                                player.Xp += 1;
 
                                 player.Kredit -= stavka;
                                 Console.WriteLine("Prehral si " + stavka);
@@ -80,6 +82,8 @@ namespace Casino
                             {
                                 int vyhra = stavka * 2;
                                 player.Kredit += vyhra;
+                                player.Xp += 2;
+
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine("Vyhral si!");
                                 Console.WriteLine("Dostavas: " + vyhra + " kreditov");
@@ -88,28 +92,19 @@ namespace Casino
                             else
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
+                                player.Xp += 1;
 
                                 player.Kredit -= stavka;
                                 Console.WriteLine("Prehral si " + stavka);
                                 Console.ResetColor();
 
                             }
-
-
                         }
                     }
-
-
-
                 }
             }
-
         }
-
-
-
-
     }
-        }
-    
+}
+
 

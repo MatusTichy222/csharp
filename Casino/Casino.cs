@@ -18,9 +18,10 @@ namespace Casino
             //Thread.Sleep(500);
             //Console.Clear();
 
-           
-            
-            Console.WriteLine(@" ====================================
+            Player MyPlayer = SaveGame.Load();
+            if (MyPlayer == null)
+            {
+                Console.WriteLine(@" ====================================
  |        CASINO ADMIRAL LOGIN       |
  ====================================
  |                                  |
@@ -30,45 +31,53 @@ namespace Casino
  |                                  |
  |        [   P O K R A Č O V A Ť   ] |
  ====================================");
-            Console.SetCursorPosition(18, 4);
-            string name = Console.ReadLine();
+                Console.SetCursorPosition(18, 4);
+                string name = Console.ReadLine();
 
-            Console.SetCursorPosition(18, 6);
-            string ageTxt = Console.ReadLine();
-            int age = int.Parse(ageTxt);
-            Console.Clear();
-            Console.WriteLine("LOADING.......");
-            Thread.Sleep(500);
+                Console.SetCursorPosition(18, 6);
+                string ageTxt = Console.ReadLine();
+                int age = int.Parse(ageTxt);
+                Console.Clear();
+                Console.WriteLine("LOADING.......");
+                Thread.Sleep(500);
 
 
-            if (age < 18)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Nemáš dostatočný vek na to hrať hazardné hry");
-                return;
+                if (age < 18)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Nemáš dostatočný vek na to hrať hazardné hry");
+                    return;
+                }
+                else if (age > 100)
+                {
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("Pravdepodobne uz nezijes");
+                    return;
+                }
+                else if (age == 67)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Deleting C:\\Users\\System32..........");
+                    Console.ResetColor();
+                    return;
+                }
+
+                MyPlayer = new Player(10, name, age, 0, 0);
+                SaveGame.Save(MyPlayer);
             }
-            else if (age > 100)
-            {
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("Pravdepodobne uz nezijes");
-                return;
-            }
-            else if (age == 67)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Deleting C:\\Users\\System32..........");
-                Console.ResetColor();
-                return;
-            }
+
             else
             {
-                Console.Clear();
-                Player MyPlayer = new Player(10, name, age, 0, 0);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"Vitaj späť, {MyPlayer.Name}!");
+                Thread.Sleep(1000);
 
                 while (true)
                 {
                     HodMincou hodMincou = new HodMincou();
                     SlotMachine slotMachine = new SlotMachine();
+
+
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine(@" __          __  _                            _           _____          _             
  \ \        / / | |                          | |         / ____|        (_)            
@@ -81,10 +90,10 @@ namespace Casino
                     Console.ResetColor();
                     Console.WriteLine(" ");
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine("1.Slot Machine");
+                    Console.WriteLine("1.Hod Mincou");
                     Console.ResetColor();
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine(" 2. Hod Mincou");
+                    Console.WriteLine(" 2. Automat");
                     Console.ResetColor();
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("9. Ukončiť hru");
@@ -93,12 +102,13 @@ namespace Casino
                     Console.WriteLine("Tvoje kredit: " + MyPlayer.Kredit);
                     Console.WriteLine("xp: " + MyPlayer.Xp + "/" + "Level: " + MyPlayer.Level);
                     Console.ResetColor();
+
                     string commandTxt = Console.ReadLine();
                     int command = int.Parse(commandTxt);
 
                     switch (command)
                     {
-                        case 1:
+                        case 2:
                             Console.Clear();
                             Console.ForegroundColor = ConsoleColor.Cyan;
                             Console.WriteLine(@"   _____ _       _     __  __            _     _             
@@ -109,10 +119,11 @@ namespace Casino
  |_____/|_|\___/ \__|  |_|  |_|\__,_|\___|_| |_|_|_| |_|\___| 
                                                              
                                                              ");
-                            slotMachine.SlotMachineGame(MyPlayer);
                             Console.ResetColor();
+
+                            slotMachine.SlotMachineGame(MyPlayer);
                             break;
-                        case 2:
+                        case 1:
                             Console.Clear();
                             Console.ForegroundColor = ConsoleColor.Yellow;
                             Console.WriteLine(@"  _    _           _   __  __ _                       
@@ -126,16 +137,12 @@ namespace Casino
                             Console.ResetColor();
                             hodMincou.HodMincouGame(MyPlayer);
                             break;
+
+
                         case 9:
+                            SaveGame.Save(MyPlayer);
                             Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine(@"  _____             _     _            _               _     _ _                                          _               _                
- |  __ \           (_)   | |          (_)             (_)   | (_)                                        | |             | |               
- | |  | | _____   ___  __| | ___ _ __  _  __ _  __   ___  __| |_ _ __ ___   ___   ___  __ _   _ __   __ _| |__  _   _  __| |_   _  ___ ___ 
- | |  | |/ _ \ \ / / |/ _` |/ _ \ '_ \| |/ _` | \ \ / / |/ _` | | '_ ` _ \ / _ \ / __|/ _` | | '_ \ / _` | '_ \| | | |/ _` | | | |/ __/ _ \
- | |__| | (_) \ V /| | (_| |  __/ | | | | (_| |  \ V /| | (_| | | | | | | |  __/ \__ \ (_| | | | | | (_| | |_) | |_| | (_| | |_| | (_|  __/
- |_____/ \___/ \_/ |_|\__,_|\___|_| |_|_|\__,_|   \_/ |_|\__,_|_|_| |_| |_|\___| |___/\__,_| |_| |_|\__,_|_.__/ \__,_|\__,_|\__,_|\___\___|
-                                                                                                                                           
-                                                                                                                                           ");
+                            Console.WriteLine("Hra uložená. Dovidenia!");
                             Console.ResetColor();
                             return;
                         default:
@@ -143,8 +150,14 @@ namespace Casino
                             Console.WriteLine("Neplatný príkaz, skús znova.");
                             Console.ResetColor();
                             break;
-                            
-
+                    }
+                    if (MyPlayer.Xp > 5)
+                    {
+                        MyPlayer.Level += 1;
+                        MyPlayer.Xp -= 5;
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("LEVEL UP");
+                        Console.ResetColor();
                     }
                 }
             }

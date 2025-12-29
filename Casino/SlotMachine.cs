@@ -26,7 +26,7 @@ namespace Casino
                 { 
                     Console.WriteLine("Kolko chces stavit?");
                 string vstuptxt = Console.ReadLine();
-                int stavka = int.Parse(vstuptxt);
+                 int stavka = int.Parse(vstuptxt);
 
                     if (stavka > player.Kredit)
                     {
@@ -71,7 +71,7 @@ namespace Casino
                             {
                                 int vyhra = stavka * 10;
                                 player.Kredit += vyhra;
-
+                                player.Xp += 5;
                                 Console.ForegroundColor = ConsoleColor.Yellow;
                                 Console.WriteLine("JACKPOT!");
                                 Console.ResetColor();
@@ -84,6 +84,7 @@ namespace Casino
                             {
                                 int vyhra = stavka * 5;
                                 player.Kredit += vyhra;
+                                player.Xp += 3;
 
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine("Vyhral si!");
@@ -94,6 +95,7 @@ namespace Casino
                             {
                                 int vyhra = stavka * 2;
                                 player.Kredit += vyhra;
+                                player.Xp += 2;
 
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine("Vyhral si!");
@@ -106,6 +108,7 @@ namespace Casino
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
+                            player.Xp += 1;
 
                             player.Kredit -= stavka;
                             Console.WriteLine("Prehral si " + stavka);
