@@ -56,14 +56,14 @@ namespace Casino
             else if (age == 67)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("HAHAHAAHAHA VTIPNY SI");
+                Console.WriteLine("Deleting C:\\Users\\System32..........");
                 Console.ResetColor();
                 return;
             }
             else
             {
                 Console.Clear();
-                Player MyPlayer = new Player(10, name, age, 0);
+                Player MyPlayer = new Player(10, name, age, 0, 0);
 
                 while (true)
                 {
