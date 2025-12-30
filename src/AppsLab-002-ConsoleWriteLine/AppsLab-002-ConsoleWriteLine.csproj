@@ -8,4 +8,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AppsLab-018-Methods\AppsLab-018-Methods.csproj" />
+  </ItemGroup>
+
 </Project>

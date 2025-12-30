@@ -13,23 +13,23 @@ namespace Casino
 
         public void StartCasino()
         {
-           // LogoCasino logoCSN = new LogoCasino();
-            //logoCSN.StartUI();
-            //Thread.Sleep(500);
-            //Console.Clear();
+            LogoCasino logoCSN = new LogoCasino();
+            logoCSN.StartUI();
+            Thread.Sleep(500);
+            Console.Clear();
 
             Player MyPlayer = SaveGame.Load();
             if (MyPlayer == null)
             {
                 Console.WriteLine(@" ====================================
- |        CASINO ADMIRAL LOGIN       |
+ |        CASINO ADMIRAL LOGIN      |
  ====================================
  |                                  |
  |   Zadaj meno:                    |
  |                                  |
  |   Zadaj vek :                    |
  |                                  |
- |        [   P O K R A Č O V A Ť   ] |
+ |     [   P O K R A Č O V A Ť    ] |
  ====================================");
                 Console.SetCursorPosition(18, 4);
                 string name = Console.ReadLine();
@@ -40,6 +40,9 @@ namespace Casino
                 Console.Clear();
                 Console.WriteLine("LOADING.......");
                 Thread.Sleep(500);
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Vďaka za prihlásenie pusť prosím program ešte raz");
 
 
                 if (age < 18)
@@ -153,11 +156,8 @@ namespace Casino
                     }
                     if (MyPlayer.Xp > 5)
                     {
+                        MyPlayer.Xp = 0;
                         MyPlayer.Level += 1;
-                        MyPlayer.Xp -= 5;
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("LEVEL UP");
-                        Console.ResetColor();
                     }
                 }
             }
