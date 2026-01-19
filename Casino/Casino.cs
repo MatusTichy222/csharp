@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Reflection.PortableExecutable;
 using System.Text;
@@ -37,12 +38,10 @@ namespace Casino
                 Console.SetCursorPosition(18, 6);
                 string ageTxt = Console.ReadLine();
                 int age = int.Parse(ageTxt);
-                Console.Clear();
                 Console.WriteLine("LOADING.......");
                 Thread.Sleep(500);
                 Console.Clear();
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Vďaka za prihlásenie pusť prosím program ešte raz");
+
 
 
                 if (age < 18)
@@ -66,19 +65,28 @@ namespace Casino
                 }
 
                 MyPlayer = new Player(10, name, age, 0, 0);
+
                 SaveGame.Save(MyPlayer);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Vďaka za prihlásenie spusť prosím program ešte raz");
             }
+
 
             else
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"Vitaj späť, {MyPlayer.Name}!");
                 Thread.Sleep(1000);
+                Console.Clear();
+
+
 
                 while (true)
                 {
                     HodMincou hodMincou = new HodMincou();
                     SlotMachine slotMachine = new SlotMachine();
+                    Ruleta ruleta = new Ruleta();
+
 
 
                     Console.ForegroundColor = ConsoleColor.Magenta;
@@ -93,17 +101,23 @@ namespace Casino
                     Console.ResetColor();
                     Console.WriteLine(" ");
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine("1.Hod Mincou");
+                    Console.WriteLine("1. Hod Mincou");
                     Console.ResetColor();
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine(" 2. Automat");
+                    Console.WriteLine("2. Automat");
+                    Console.ResetColor();
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("3. Ruleta");
+                    Console.ResetColor();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("8. Odstrániť uloženú hru");
                     Console.ResetColor();
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("9. Ukončiť hru");
                     Console.ResetColor();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Tvoje kredit: " + MyPlayer.Kredit);
-                    Console.WriteLine("xp: " + MyPlayer.Xp + "/" + "Level: " + MyPlayer.Level);
+                    Console.WriteLine("xp: " + MyPlayer.Xp + "/5 " + "|" + " Level: " + MyPlayer.Level);
                     Console.ResetColor();
 
                     string commandTxt = Console.ReadLine();
@@ -140,7 +154,38 @@ namespace Casino
                             Console.ResetColor();
                             hodMincou.HodMincouGame(MyPlayer);
                             break;
+                        case 3:
+                            Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.DarkBlue;
+                            Console.WriteLine(@"
+ _____            _      _   _       
+|  __ \          | |    | | | |      
+| |__) |___  _   _| | ___| |_| |_ ___ 
+|  _  // _ \| | | | |/ _ \ __| __/ _ \
+| | \ \ (_) | |_| | |  __/ |_| ||  __/
+|_|  \_\___/ \__,_|_|\___|\__|\__\___|
+                                     ");
+                            Console.ResetColor();
+                            ruleta.RouletteGame(MyPlayer);
+                            break;
+                        case 8:
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Naozaj chceš začať odznova?");
+                            ConsoleKey key = Console.ReadKey(true).Key;
 
+                            if (key == ConsoleKey.Escape)
+                            {
+                                SaveGame.DeleteSave();
+                                Console.WriteLine("Uložená hra odstránená. Reštartuj hru.");
+                                Console.ResetColor();
+                                return;
+                            }
+                            else if (key == ConsoleKey.Enter)
+                            {
+                                Console.WriteLine("Zrušené. Návrat do menu.");
+                                Console.ResetColor();
+                            }
+                            break;
 
                         case 9:
                             SaveGame.Save(MyPlayer);
@@ -154,11 +199,15 @@ namespace Casino
                             Console.ResetColor();
                             break;
                     }
+
+
+
                     if (MyPlayer.Xp > 5)
                     {
                         MyPlayer.Xp = 0;
                         MyPlayer.Level += 1;
                     }
+
                 }
             }
         }

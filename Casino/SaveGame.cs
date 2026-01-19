@@ -27,5 +27,12 @@ namespace Casino
             string json = File.ReadAllText(subor);
             return JsonSerializer.Deserialize<Player>(json);
         }
+        public static void DeleteSave()
+        {
+            if (File.Exists(subor))
+            {
+                File.Delete(subor);
+            }
+        }
     }
 }
