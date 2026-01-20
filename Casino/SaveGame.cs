@@ -9,6 +9,7 @@ namespace Casino
 
         public static void Save(Player player)
         {
+            // Serializuje objekt Player do JSON formátu a uloží ho do súboru
             string json = JsonSerializer.Serialize(player, new JsonSerializerOptions
             {
                 WriteIndented = true
@@ -19,6 +20,7 @@ namespace Casino
 
         public static Player Load()
         {
+            // Načíta uloženú hru zo súboru, ak existuje, inak vráti null
             if (!File.Exists(subor))
             {
                 return null;
@@ -29,6 +31,7 @@ namespace Casino
         }
         public static void DeleteSave()
         {
+            // Odstráni súbor so save hrou, ak existuje
             if (File.Exists(subor))
             {
                 File.Delete(subor);

@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace Casino
 {
-    public  class Player
+    public class Player
     {
-        public int Kredit { get; set; } 
-        public  string Name { get; set; }
-        public  int Age { get; set; }
+        // Hlavné vlastnosti hráča 
+        public int Kredit { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
         public int Level { get; set; }
         public int Xp { get; set; }
 
