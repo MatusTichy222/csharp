@@ -21,13 +21,14 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        /*private void Button_Click(object sender, RoutedEventArgs e)
         {
-            label_Helloworld.Content = "Hello World";
+            label_Helloworld.Content = "Hello nWorld";
             Button_ChangeLabel.Visibility = Visibility.Collapsed;
-        }
+        }*/
 
-        /*  private void Button_Click(object sender, RoutedEventArgs e)
+
+           private void Button_Click(object sender, RoutedEventArgs e)
           {
               MessageBox.Show("Hello World", "Warning!!!", MessageBoxButton.YesNoCancel, MessageBoxImage.Asterisk);
 
@@ -37,7 +38,7 @@ namespace WpfApp1
           private void Button_MouseEnter(object sender, MouseEventArgs e)
           {
               MessageBox.Show("MouseEnter", "Warning!!!", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
-          }*/
+          }
 
 
 
