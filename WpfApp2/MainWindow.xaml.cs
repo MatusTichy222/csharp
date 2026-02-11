@@ -46,10 +46,11 @@ namespace WpfApp2
             if (zadaneCislo == cislo)
             {
                 koniechry = true;
-                Info.Text = "Gratulujem vyhral si poukazku do klastora v cadci";
+                Info.Text = "Gratulujem. Zvladol si to za " + pokusy + " pokusov.";
                 pokusy = 0;
                 Pokusy.Text = pokusy.ToString();
                 cislo = r.Next(0, 101);
+                
             }
             else
             {

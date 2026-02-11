@@ -12,7 +12,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/6D814E49-F87E-4EA3-8283-8FC5A35732E2 (1).jpg"/>
         </Grid.Background>
-        <TextBlock HorizontalAlignment="Left" FontSize="50" Foreground="Blue"  Margin="64,10,0,0" TextWrapping="Wrap" Text="Hot / Cold " VerticalAlignment="Top" RenderTransformOrigin="-1.44,-3.243"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="50" Foreground="Blue"  Margin="64,10,0,0" TextWrapping="Wrap" Text="Hot David / Cold David " VerticalAlignment="Top" RenderTransformOrigin="-1.44,-3.243"/>
         <Label Content="Uhadni tajne cislo 1-100" HorizontalAlignment="Left" Margin="64,82,0,0" VerticalAlignment="Top" FontSize="30" Foreground="Green"/>
         <TextBox Background ="BlanchedAlmond"  TextAlignment="Center" VerticalContentAlignment="Center" Name="Zadanie" HorizontalAlignment="Left" Margin="64,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="122" FontSize="20" FontFamily="Arial" Height="64" />
         <Button FontSize="30" Background="Cyan" Foreground="Blue" BorderBrush="YellowGreen" BorderThickness="4" Content="skus" HorizontalAlignment="Left" Margin="248,143,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.42" Click="Button_Click_skus" Height="64" Width="146"/>
