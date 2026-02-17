@@ -1,12 +1,26 @@
 ﻿<Window x:Class="Domaca_uloha_F1_start.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Domaca_uloha_F1_start"
-        mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid RenderTransformOrigin="0.485,0.474">
+        <Ellipse x:Name="Light1" Width="90" Height="90" Fill="DimGray" Margin="47,32,663,312" />
+        <Ellipse x:Name="Light11" Width="90" Height="90" Fill="DimGray" Margin="47,154,663,190" />
 
+        <Ellipse x:Name="Light2" Width="90" Height="90" Fill="DimGray" Margin="197,32,513,312" />
+        <Ellipse x:Name="Light22" Width="90" Height="90" Fill="DimGray" Margin="197,154,513,190" />
+
+        <Ellipse x:Name="Light3" Width="90" Height="90" Fill="DimGray" Margin="341,32,369,312" />
+        <Ellipse x:Name="Light33" Width="90" Height="90" Fill="DimGray" Margin="341,154,369,190"/>
+
+        <Ellipse x:Name="Light4" Width="90" Height="90" Fill="DimGray" Margin="487,32,223,312"/>
+        <Ellipse x:Name="Light44" Width="90" Height="90" Fill="DimGray" Margin="487,154,223,190"/>
+
+        <Ellipse x:Name="Light5" Width="90" Height="90" Fill="DimGray" Margin="627,32,83,312"/>
+        <Ellipse x:Name="Light55" Width="90" Height="90" Fill="DimGray" Margin="627,154,83,190"/>
+
+        <Button IsEnabled="True" FontSize="35" Name="StartButton" Content="Spusti" HorizontalAlignment="Left" Margin="20,0,0,20" VerticalAlignment="Bottom" Background="#FF1FFF00" Click="StartButton_Click"/>
+        <Button IsEnabled="False" FontSize="35" Name="StopButton" Content="Stop" HorizontalAlignment="Right" Margin="0,0,20,20" VerticalAlignment="Bottom" Background="#FFFF0C00"/>
+        <Button IsEnabled="True" FontSize="35" Name="KlikButton" Content="Klikni" HorizontalAlignment="Center" Margin="0,100,0,20" VerticalAlignment="Bottom" Background="#FFFF7500" Click="KlikButton_Click" Width="264"/>
+        <Label  Name="TimeLabel" HorizontalContentAlignment="Center" FontSize="30" Content="00:00.000" HorizontalAlignment="Center" Margin="0,296,0,0" VerticalAlignment="Top" Width="412"/>
     </Grid>
 </Window>

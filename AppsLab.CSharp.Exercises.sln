@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11506.43 insiders
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{56555FB0-B513-49EF-9002-A5AF135EA090}"
 EndProject
@@ -140,6 +140,22 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domaca uloha F1 start", "Domaca uloha F1 start\Domaca uloha F1 start.csproj", "{BE3B0488-6802-41AE-A619-6E69C6EF9AA5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semafor", "Semafor\Semafor.csproj", "{D21B60F1-A8CF-45A8-B831-FD4799EB5989}"
+EndProject
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "Stopky", "Stopky\bin\Debug\net8.0-windows\Stopky.exe", "{F1407D48-BCEF-90F3-F89B-26B618D6CBEC}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = C:\Users\tichy\source\repos\csharp\Stopky\bin\Debug\net8.0-windows\Stopky.exe
+		RemoteMachine = DESKTOP-25G6DG6
+		StartingDirectory = C:\Users\tichy\source\repos\csharp\Stopky\bin\Debug\net8.0-windows
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+		IORedirection = Auto
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stopky1", "Stopky1\Stopky1.csproj", "{C15C7357-6B5A-489F-80AF-52FCCB242E7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -943,6 +959,24 @@ Global
 		{D21B60F1-A8CF-45A8-B831-FD4799EB5989}.Release|x64.Build.0 = Release|Any CPU
 		{D21B60F1-A8CF-45A8-B831-FD4799EB5989}.Release|x86.ActiveCfg = Release|Any CPU
 		{D21B60F1-A8CF-45A8-B831-FD4799EB5989}.Release|x86.Build.0 = Release|Any CPU
+		{F1407D48-BCEF-90F3-F89B-26B618D6CBEC}.Debug|Any CPU.ActiveCfg = Release|x64
+		{F1407D48-BCEF-90F3-F89B-26B618D6CBEC}.Debug|x64.ActiveCfg = Release|x64
+		{F1407D48-BCEF-90F3-F89B-26B618D6CBEC}.Debug|x86.ActiveCfg = Release|x64
+		{F1407D48-BCEF-90F3-F89B-26B618D6CBEC}.Release|Any CPU.ActiveCfg = Release|x64
+		{F1407D48-BCEF-90F3-F89B-26B618D6CBEC}.Release|x64.ActiveCfg = Release|x64
+		{F1407D48-BCEF-90F3-F89B-26B618D6CBEC}.Release|x86.ActiveCfg = Release|x64
+		{C15C7357-6B5A-489F-80AF-52FCCB242E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C15C7357-6B5A-489F-80AF-52FCCB242E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C15C7357-6B5A-489F-80AF-52FCCB242E7F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C15C7357-6B5A-489F-80AF-52FCCB242E7F}.Debug|x64.Build.0 = Debug|Any CPU
+		{C15C7357-6B5A-489F-80AF-52FCCB242E7F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C15C7357-6B5A-489F-80AF-52FCCB242E7F}.Debug|x86.Build.0 = Debug|Any CPU
+		{C15C7357-6B5A-489F-80AF-52FCCB242E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C15C7357-6B5A-489F-80AF-52FCCB242E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C15C7357-6B5A-489F-80AF-52FCCB242E7F}.Release|x64.ActiveCfg = Release|Any CPU
+		{C15C7357-6B5A-489F-80AF-52FCCB242E7F}.Release|x64.Build.0 = Release|Any CPU
+		{C15C7357-6B5A-489F-80AF-52FCCB242E7F}.Release|x86.ActiveCfg = Release|Any CPU
+		{C15C7357-6B5A-489F-80AF-52FCCB242E7F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1015,6 +1049,8 @@ Global
 		{2B5ED94D-4C08-4370-BFE5-EE3BDEA21BEB} = {F36717F2-7AB1-426E-8F5E-F9200FC1B1A2}
 		{BE3B0488-6802-41AE-A619-6E69C6EF9AA5} = {F36717F2-7AB1-426E-8F5E-F9200FC1B1A2}
 		{D21B60F1-A8CF-45A8-B831-FD4799EB5989} = {F36717F2-7AB1-426E-8F5E-F9200FC1B1A2}
+		{F1407D48-BCEF-90F3-F89B-26B618D6CBEC} = {F36717F2-7AB1-426E-8F5E-F9200FC1B1A2}
+		{C15C7357-6B5A-489F-80AF-52FCCB242E7F} = {F36717F2-7AB1-426E-8F5E-F9200FC1B1A2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D028BCE2-5FE2-4317-BEF9-6C839912FF38}
