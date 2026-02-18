@@ -114,5 +114,10 @@ namespace Domaca_uloha_F1_start
             if (index == 4) Light4.Fill = Light44.Fill = Brushes.Red;
             if (index == 5) Light5.Fill = Light55.Fill = Brushes.Red;
         }
+
+        private void StopButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

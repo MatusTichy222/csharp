@@ -18,9 +18,9 @@
         <Ellipse x:Name="Light5" Width="90" Height="90" Fill="DimGray" Margin="627,32,83,312"/>
         <Ellipse x:Name="Light55" Width="90" Height="90" Fill="DimGray" Margin="627,154,83,190"/>
 
-        <Button IsEnabled="True" FontSize="35" Name="StartButton" Content="Spusti" HorizontalAlignment="Left" Margin="20,0,0,20" VerticalAlignment="Bottom" Background="#FF1FFF00" Click="StartButton_Click"/>
-        <Button IsEnabled="False" FontSize="35" Name="StopButton" Content="Stop" HorizontalAlignment="Right" Margin="0,0,20,20" VerticalAlignment="Bottom" Background="#FFFF0C00"/>
-        <Button IsEnabled="True" FontSize="35" Name="KlikButton" Content="Klikni" HorizontalAlignment="Center" Margin="0,100,0,20" VerticalAlignment="Bottom" Background="#FFFF7500" Click="KlikButton_Click" Width="264"/>
-        <Label  Name="TimeLabel" HorizontalContentAlignment="Center" FontSize="30" Content="00:00.000" HorizontalAlignment="Center" Margin="0,296,0,0" VerticalAlignment="Top" Width="412"/>
+        <Button FontSize="35" Name="StartButton" Content="Spusti" HorizontalAlignment="Left" Margin="20,0,0,20" VerticalAlignment="Bottom" Background="#FF1FFF00" Click="StartButton_Click"/>
+        <Button FontSize="35" Name="StopButton" Content="Stop" HorizontalAlignment="Right" Margin="0,0,20,20" VerticalAlignment="Bottom" Background="#FFFF0C00" Click="StopButton_Click"/>
+        <Button FontSize="35" Name="KlikButton" Content="Klikni" HorizontalAlignment="Center" Margin="0,100,0,20" VerticalAlignment="Bottom" Background="#FFFF7500" Click="KlikButton_Click" Width="264"/>
+        <Label   Name="TimeLabel" HorizontalContentAlignment="Center" FontSize="30" Content="00:00.000" HorizontalAlignment="Right" Margin="0,0,200,-150" VerticalAlignment="Center" Width="412" Height="55"/>
     </Grid>
 </Window>
